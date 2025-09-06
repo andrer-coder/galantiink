@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Saiba mais sobre o Galanti INK Tattoo Studio, nossa história, missão e equipe de tatuadores talentosos.">
+  <title>Sobre - Galanti INK Tattoo Studio</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #111;
+      color: #eee;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #222;
+      padding: 20px;
+      border-bottom: 2px solid #f04;
+      position: relative;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      letter-spacing: 3px;
+    }
+    nav {
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: #f04;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover, nav a:focus {
+      text-decoration: underline;
+      outline: none;
+    }
+    nav a[aria-current="page"] {
+      text-decoration: underline;
+      font-weight: bolder;
+    }
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      position: absolute;
+      top: 25px;
+      right: 20px;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+      z-index: 1000;
+    }
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background: #f04;
+      transition: all 0.3s ease;
+    }
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        background: #222;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 200px;
+        padding: 10px;
+        border-left: 2px solid #f04;
+      }
+      nav.show {
+        display: flex;
+      }
+      .hamburger {
+        display: flex;
+      }
+    }
+
+    main {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .intro {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .intro h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+    .intro p {
+      font-size: 1.2rem;
+      color: #ccc;
+      margin-top: 0;
+    }
+
+    .about-us {
+      margin-top: 40px;
+    }
+    .about-us-text {
+      font-size: 1.2rem;
+      color: #ddd;
+      line-height: 1.6;
+    }
+
+    .team {
+      margin-top: 40px;
+      text-align: center;
+    }
+    .team-member {
+      display: inline-block;
+      margin: 10px;
+      text-align: center;
+    }
+    .team-member img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    footer {
+      background: #222;
+      padding: 20px;
+      text-align: center;
+      color: #ddd;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Galanti INK Tattoo Studio</h1>
+    <div class="hamburger" aria-label="Menu" tabindex="0">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="sobre.html" aria-current="page">Sobre</a>
+      <a href="galeria.html">Galeria</a>
+      <a href="serviços.html">Serviços</a>
+      <a href="game.html">Game</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h2>Quem Somos</h2>
+      <p>Conheça o nosso estúdio, nossa história e o que nos torna especiais.</p>
+    </section>
+
+    <section class="about-us">
+      <div class="about-us-text">
+        <h3>Nosso Estúdio</h3>
+        <p>
+          O Galanti INK Tattoo Studio foi fundado com o objetivo de proporcionar uma experiência única para todos que buscam expressar sua identidade através da arte da tatuagem.
+          Com um ambiente acolhedor e uma equipe talentosa e profissional, garantimos que cada tatuagem seja realizada com segurança e precisão. 
+        </p>
+
+        <h3>Missão</h3>
+        <p>
+          Nossa missão é transformar histórias, sentimentos e momentos especiais em obras de arte permanentes. Acreditamos que cada tatuagem é uma expressão pessoal única, e trabalhamos com total dedicação para garantir que cada cliente se sinta confortável e satisfeito com o resultado final.
+        </p>
+
+        <h3>Equipe</h3>
+        <p>
+          Nossa equipe é composta por tatuadores experientes, apaixonados pela arte e comprometidos com a qualidade. Cada um de nossos artistas tem uma abordagem personalizada, garantindo que o seu estilo e as suas preferências sejam respeitados durante todo o processo criativo.
+        </p>
+      </div>
+
+      <div class="team">
+        <h3>Conheça a Nossa Equipe</h3>
+        <div class="team-member">
+          <img src="Tatuador1.jpg" alt="Tatuador 1" />
+          <p><strong>Fernando Galanti</strong> - Fundador e Tatuador</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Galanti INK Tattoo Studio</p>
+  </footer>
+
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('nav');
+
+    hamburger.addEventListener('click', () => {
+      nav.classList.toggle('show');
+    });
+
+    hamburger.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') nav.classList.toggle('show');
+    });
+  </script>
+</body>
+</html>

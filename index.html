@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Galanti INK Tattoo Studio</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #111;
+      color: #eee;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #222;
+      padding: 20px;
+      border-bottom: 2px solid #f04;
+      position: relative;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      letter-spacing: 3px;
+    }
+    nav {
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: #f04;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0 8px;
+    }
+    nav a:hover, nav a:focus {
+      text-decoration: underline;
+      outline: none;
+    }
+    nav a[aria-current="page"] {
+      text-decoration: underline;
+      font-weight: bolder;
+    }
+    .hamburger {
+      display: none;
+      position: absolute;
+      top: 25px;
+      right: 20px;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+      z-index: 1000;
+    }
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background: #f04;
+    }
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        background: #222;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 200px;
+        padding: 10px;
+        border-left: 2px solid #f04;
+      }
+      nav.show {
+        display: flex;
+      }
+      .hamburger {
+        display: flex;
+      }
+    }
+    main {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .intro {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .intro img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 15px #f04;
+      margin-top: 20px;
+    }
+    .intro h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+    .intro p {
+      font-size: 1.2rem;
+      color: #ccc;
+      margin-top: 0;
+    }
+    .about-art {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+      margin-top: 40px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .about-art-text {
+      flex: 1 1 400px;
+      font-size: 1.1rem;
+      color: #ddd;
+      line-height: 1.6;
+    }
+    .radio-player {
+      text-align: center;
+      margin-top: 60px;
+      color: #eee;
+    }
+    .radio-player h3 {
+      font-size: 1.6rem;
+      margin-bottom: 10px;
+    }
+    audio {
+      width: 100%;
+      max-width: 400px;
+    }
+    footer {
+      background: #222;
+      color: #ccc;
+      text-align: center;
+      padding: 40px 20px 20px 20px;
+      margin-top: 60px;
+      border-top: 2px solid #f04;
+      font-size: 0.9rem;
+    }
+    footer .social-icons {
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+    footer .social-icons a svg {
+      transition: transform 0.3s, fill 0.3s;
+    }
+    footer .social-icons a:hover svg {
+      transform: scale(1.2);
+      fill: #fff;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Galanti INK Tattoo Studio</h1>
+    <div class="hamburger" aria-label="Menu" tabindex="0">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <nav>
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="galeria.html">Galeria</a>
+      <a href="serviços.html">Serviços</a>
+      <a href="game.html">Game</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h2>Bem-vindo ao Galanti INK Tattoo Studio</h2>
+      <p>Transformamos sua história em arte que dura para sempre.</p>
+      <img src="primeira.jpg" alt="Imagem da Home 1" />
+    </section>
+
+    <section class="about-art">
+      <div class="about-art-text">
+        <h3>A Arte da Tatuagem</h3>
+        <p>
+          A tatuagem é uma forma de expressão única que combina arte, cultura e personalidade. 
+          No Galanti INK, acreditamos que cada desenho carrega uma história e um significado especial para quem o escolhe.
+        </p>
+      </div>
+    </section>
+
+    <section class="radio-player">
+      <h3>Ouça a Rádio Rock</h3>
+      <audio controls autoplay>
+        <source src="https://playerservices.streamtheworld.com/api/livestream-redirect/RADIO_ROCK.mp3" type="audio/mpeg">
+        Seu navegador não suporta o player de áudio.
+      </audio>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Galanti INK Tattoo Studio</p>
+    <div class="social-icons">
+      <a href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Facebook">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f04" width="24" height="24">
+          <path d="M22.675 0h-21.35C.595 0 0 .593 0 1.326v21.348C0 23.406.595 24 1.325 24H12v-9.294H9.293V11.53H12V9.414c0-2.71 1.64-4.187 4.034-4.187 1.148 0 2.135.085 2.422.123v2.81l-1.665.001c-1.304 0-1.555.62-1.555 1.527v2.006h3.112l-.405 3.176H15.236V24h7.439C23.406 24 24 23.406 24 22.674V1.326C24 .593 23.406 0 22.675 0z"/>
+        </svg>
+      </a>
+      <a href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f04" width="24" height="24">
+          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.17.056 1.97.246 2.428.413a4.92 4.92 0 0 1 1.757 1.14 4.92 4.92 0 0 1 1.14 1.758c.167.459.357 1.259.413 2.428.058 1.266.07 1.645.07 4.85s-.012 3.584-.07 4.85c-.056 1.17-.246 1.97-.413 2.428a4.92 4.92 0 0 1-1.14 1.757 4.92 4.92 0 0 1-1.757 1.14c-.459.167-1.259.357-2.428.413-1.266.058-1.645.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.056-1.97-.246-2.428-.413a4.92 4.92 0 0 1-1.757-1.14 4.92 4.92 0 0 1-1.14-1.757c-.167-.459-.357-1.259-.413-2.428-.058-1.266-.07-1.645-.07-4.85s.012-3.584.07-4.85c.056-1.17.246-1.97.413-2.428a4.92 4.92 0 0 1 1.14-1.757 4.92 4.92 0 0 1 1.757-1.14c.459-.167 1.259-.357 2.428-.413 1.266-.058 1.645-.07 4.85-.07zm0-2.163C8.737 0 8.332.013 7.052.072 5.766.13 4.678.33 3.776.69 2.848 1.063 2.063 1.695 1.38 2.38c-.684.684-1.317 1.469-1.69 2.398C-.33 5.322-.13 6.41-.072 7.696.013 8.976 0 9.381 0 12c0 2.619.013 3.024.072 4.304.058 1.286.258 2.374.618 3.276.373.929 1.006 1.715 1.69 2.398.684.684 1.469 1.317 2.398 1.69.902.36 1.99.56 3.276.618 1.28.059 1.685.072 4.304.072s3.024-.013 4.304-.072c1.286-.058 2.374-.258 3.276-.618.929-.373 1.715-1.006 2.398-1.69.684-.684 1.317-1.469 1.69-2.398.36-.902.56-1.99.618-3.276.059-1.28.072-1.685.072-4.304s-.013-3.024-.072-4.304c-.058-1.286-.258-2.374-.618-3.276-.373-.929-1.006-1.715-1.69-2.398C21.715 1.695 20.93 1.063 20.001.69 19.099.33 18.011.13 16.725.072 15.445.013 15.04 0 12 0z"/>
+          <path d="M12 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a3.999 3.999 0 1 1 0-7.998 3.999 3.999 0 0 1 0 7.998z"/>
+          <circle cx="18.406" cy="5.594" r="1.44"/>
+        </svg>
+      </a>
+      <a href="https://www.twitter.com" target="_blank" rel="noopener" aria-label="Twitter">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f04" width="24" height="24">
+          <path d="M24 4.557a9.83 9.83 0 0 1-2.828.775 4.932 4.932 0 0 0 2.165-2.724 9.864 9.864 0 0 1-3.127 1.195 4.916 4.916 0 0 0-8.384 4.482A13.94 13.94 0 0 1 1.671 3.149a4.916 4.916 0 0 0 1.523 6.556 4.897 4.897 0 0 1-2.229-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.935 4.935 0 0 1-2.224.084 4.918 4.918 0 0 0 4.59 3.417 9.867 9.867 0 0 1-6.102 2.105c-.395 0-.787-.023-1.175-.069A13.945 13.945 0 0 0 7.548 21c9.142 0 14.307-7.721 13.995-14.646A9.935 9.935 0 0 0 24 4.557z"/>
+        </svg>
+      </a>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('nav');
+    hamburger.addEventListener('click', () => {
+      nav.classList.toggle('show');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Entre em contato com a Galanti INK Tattoo Studio para dúvidas, agendamentos ou informações sobre tatuagens.">
+  <title>Contato - Galanti INK Tattoo Studio</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #111;
+      color: #eee;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #222;
+      padding: 20px;
+      border-bottom: 2px solid #f04;
+      position: relative;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      letter-spacing: 3px;
+    }
+    nav {
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: #f04;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover, nav a:focus {
+      text-decoration: underline;
+      outline: none;
+    }
+    nav a[aria-current="page"] {
+      text-decoration: underline;
+      font-weight: bolder;
+    }
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      position: absolute;
+      top: 25px;
+      right: 20px;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+      z-index: 1000;
+    }
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background: #f04;
+      transition: all 0.3s ease;
+    }
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        background: #222;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 200px;
+        padding: 10px;
+        border-left: 2px solid #f04;
+      }
+      nav.show {
+        display: flex;
+      }
+      .hamburger {
+        display: flex;
+      }
+    }
+
+    main {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .intro {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .intro h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+    .intro p {
+      font-size: 1.2rem;
+      color: #ccc;
+      margin-top: 0;
+    }
+
+    .contact {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      margin-top: 40px;
+      flex-wrap: wrap;
+    }
+    .contact-info, .contact-form {
+      flex: 1;
+      background: #222;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      min-width: 300px;
+    }
+    .contact-info h3,
+    .contact-form h3 {
+      color: #f04;
+      font-size: 1.8rem;
+    }
+    .contact-info p,
+    .contact-form p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #ccc;
+    }
+    .contact-info ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    .contact-info ul li {
+      font-size: 1rem;
+      color: #ddd;
+    }
+    .contact-form label {
+      display: block;
+      margin-bottom: 5px;
+      color: #ccc;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      background: #333;
+      border: 1px solid #444;
+      border-radius: 5px;
+      color: #fff;
+    }
+    .contact-form button {
+      padding: 12px 20px;
+      background: #f04;
+      border: none;
+      border-radius: 5px;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .contact-form button:hover {
+      background: #e03e3e;
+    }
+
+    footer {
+      background: #222;
+      padding: 20px;
+      text-align: center;
+      color: #ddd;
+    }
+
+    @media (max-width: 768px) {
+      .contact {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Galanti INK Tattoo Studio</h1>
+    <div class="hamburger" aria-label="Menu" tabindex="0">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="galeria.html">Galeria</a>
+      <a href="serviços.html">Serviços</a>
+      <a href="game.html">Game</a>
+      <a href="contato.html" aria-current="page">Contato</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h2>Entre em Contato</h2>
+      <p>Tem alguma dúvida ou quer agendar sua tatuagem? Fale conosco!</p>
+    </section>
+
+    <section id="contato" class="contact">
+      <div class="contact-info">
+        <h3>Informações de Contato</h3>
+        <p><strong>Endereço:</strong> Rua Exemplo, 123, Bairro Centro, Cidade, Estado</p>
+        <p><strong>Telefone:</strong> (XX) XXXX-XXXX</p>
+        <p><strong>Email:</strong> contato@galantiink.com</p>
+        <p><strong>Horário de Funcionamento:</strong></p>
+        <ul>
+          <li>Segunda a Sexta: 10:00 - 18:00</li>
+          <li>Sábado: 10:00 - 14:00</li>
+          <li>Domingo: Fechado</li>
+        </ul>
+      </div>
+
+      <div class="contact-form">
+        <h3>Formulário de Contato</h3>
+        <form action="enviar_email.php" method="POST">
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" name="nome" required />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="mensagem">Mensagem</label>
+          <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Galanti INK Tattoo Studio</p>
+  </footer>
+
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('nav');
+
+    hamburger.addEventListener('click', () => {
+      nav.classList.toggle('show');
+    });
+
+    hamburger.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') nav.classList.toggle('show');
+    });
+  </script>
+</body>
+</html>

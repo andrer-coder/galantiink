@@ -1,0 +1,387 @@
+/* Estilos Gerais */
+body {
+  font-family: 'Arial', sans-serif;
+  background: #111;
+  color: #eee;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: #222;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 2px solid #f04;
+  position: relative;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  letter-spacing: 3px;
+}
+
+nav {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #f04;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 15px;
+}
+
+nav a:hover, nav a:focus {
+  text-decoration: underline;
+  outline: none;
+}
+
+nav a[aria-current="page"] {
+  text-decoration: underline;
+  font-weight: bolder;
+}
+
+.hamburger {
+  display: none;
+  position: absolute;
+  top: 25px;
+  right: 20px;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  z-index: 1000;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background: #f04;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  nav {
+    display: none;
+    flex-direction: column;
+    background: #222;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 200px;
+    padding: 10px;
+    border-left: 2px solid #f04;
+  }
+  nav.show {
+    display: flex;
+  }
+  .hamburger {
+    display: flex;
+  }
+}
+
+main {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.intro h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.intro p {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-top: 0;
+}
+
+/* Galeria Horizontal Rolável */
+.gallery {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto; /* permite rolar horizontalmente */
+  padding: 20px;
+}
+
+.gallery-item {
+  flex: 0 0 250px; /* largura fixa para cada item */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item:hover {
+  transform: scale(1.05);
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+/* Estilo da Seção Sobre a Arte */
+.about-art {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  margin-top: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.about-art-text {
+  flex: 1 1 400px;
+  font-size: 1.1rem;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+/* Estilo do Player de Rádio */
+.radio-player {
+  text-align: center;
+  margin-top: 60px;
+  color: #eee;
+}
+
+.radio-player h3 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+audio {
+  width: 100%;
+  max-width: 400px;
+  outline: none;
+}
+
+/* Estilos para a nova aba "Game" */
+.game-section {
+  padding: 40px 20px;
+  background: #222;
+  color: #eee;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.game-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #f04;
+}
+
+.game-container {
+  background-color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.game-container p {
+  font-size: 1.2rem;
+  color: #ddd;
+}
+
+/* Estilo específico para a página Sobre Nós */
+.about-us {
+  margin-top: 40px;
+  padding: 0 20px;
+}
+
+.about-us h3 {
+  font-size: 1.8rem;
+  margin-top: 20px;
+  color: #f04;
+}
+
+.about-us p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #ddd;
+}
+
+.team {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.team-member {
+  text-align: center;
+}
+
+.team-member img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #f04;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .carousel {
+    max-width: 100%;
+  }
+
+  .about-art,
+  .team {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Footer */
+footer {
+  background: #222;
+  padding: 20px;
+  text-align: center;
+  color: #eee;
+  margin-top: 60px;
+}
+
+/* Página Serviços */
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 40px 20px;
+  margin-top: 30px;
+}
+
+.service-item {
+  background: #222;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+}
+
+.service-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.service-item h3 {
+  font-size: 1.8rem;
+  color: #f04;
+  margin-bottom: 15px;
+}
+
+.service-item p {
+  font-size: 1.1rem;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+.service-item:hover {
+  transform: scale(1.05);
+}
+
+.agendamento {
+  text-align: center;
+  background: #333;
+  padding: 30px 20px;
+  border-radius: 10px;
+  margin-top: 40px;
+}
+
+.agendamento h3 {
+  font-size: 2rem;
+  color: #f04;
+  margin-bottom: 20px;
+}
+
+.agendamento p {
+  font-size: 1.2rem;
+  color: #ddd;
+}
+
+/* Página Contato */
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 40px 20px;
+  gap: 40px;
+}
+
+.contact-info {
+  flex: 1 1 40%;
+  background: #222;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.contact-info h3 {
+  font-size: 1.8rem;
+  color: #f04;
+  margin-bottom: 15px;
+}
+
+.contact-info p,
+.contact-info ul {
+  font-size: 1.1rem;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+.contact-info ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.contact-form {
+  flex: 1 1 50%;
+  background: #222;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.contact-form h3 {
+  font-size: 1.8rem;
+  color: #f04;
+  margin-bottom: 15px;
+}
+
+.contact-form label {
+  font-size: 1.1rem;
+  color: #ddd;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #444;
+  background-color: #333;
+  color: #fff;
+  border-radius: 5px;
+}
